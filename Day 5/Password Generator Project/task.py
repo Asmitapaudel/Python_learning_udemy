@@ -8,3 +8,20 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 
+import random
+password=[]
+for letter in range(nr_letters): #0 to (nr_letters-1)
+    letter=random.choice(letters)
+    password.append(letter)
+for symbol in range(nr_symbols):
+    symbol=random.choice(symbols)
+    password.append(symbol)
+for number in range(nr_numbers):
+    number=random.choice(numbers)
+    password.append(number)
+
+print(password)
+random.shuffle(password)
+print(password)
+
+print(f"Your password is: {''.join(password)}")
